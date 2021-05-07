@@ -17,10 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/productos', function () {
+    return view('showproductos');
+});
+
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
