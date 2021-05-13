@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EmpleadoLoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,12 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('empleado/empleadoLogin');
 });
 
 Route::get('/productos', function () {
-    return view('showproductos');
+    return view('empleado/empleadoinicio');
 });
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Empleado Login
+ Route::get('empleado/login', [EmpleadoLoginController::class, 'showLoginForm']);
+ Route::post('empleado/login', [EmpleadoLoginController::class, 'login'])->name("empleado.login");
+ Route::resource('empleado', EmpleadoLoginController::class);
