@@ -14,7 +14,7 @@ use App\Http\Controllers\EmpleadoLoginController;
 */
 
 Route::get('/', function () {
-    return view('empleado/empleadoLogin');
+    return view('Auth/login');
 });
 
 Route::get('/productos', function () {

@@ -60,7 +60,7 @@
                             <p>
                             <hr>
                             <form action="{{route('empleado.login')}}" method="POST">
-                                @csrf
+                            @csrf
                                 <div class="row justify-content-center">
                                     <div class="col-md-6">
                                         <div class="form-group">
