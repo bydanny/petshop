@@ -73,8 +73,7 @@
             <!-- Proveedores -->                
             <li><a href="#opcionesProveedor" aria-expanded="false" data-toggle="collapse"> <i class="icon-user"></i>Proveedores</a>
               <ul id="opcionesProveedor" class="collapse list-unstyled ">
-                <li><a href="">Mostras Proveedores </a></li>
-                <li><a href="">Actualizar Proveedores</a></li>
+                <li><a href="{{route('proveedor.index')}}">Actualizar Proveedores </a></li>
                 <li><a href="">Borrar Proveedor</a></li>
               </ul>
             </li>

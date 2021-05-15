@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoLoginController;
+use App\Http\Controllers\ProveedorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Empleado Login
- Route::get('empleado/login', [EmpleadoLoginController::class, 'showLoginForm']);
- Route::post('empleado/login', [EmpleadoLoginController::class, 'login'])->name("empleado.login");
- Route::resource('empleado', EmpleadoLoginController::class);
+Route::get('empleado/login', [EmpleadoLoginController::class, 'showLoginForm']);
+Route::post('empleado/login', [EmpleadoLoginController::class, 'login'])->name("empleado.login");
+Route::resource('empleado', EmpleadoLoginController::class);
+
+//Proveedor
+Route::resource('proveedor', ProveedorController::class);
+Route::post("/cerveza/scopeName", [ProveedorController::class, 'scopeName'])->name("proveedor.scopeName");
